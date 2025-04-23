@@ -128,7 +128,7 @@ header h1 {
 
 .gif {
     width: auto; /* Ajusta a largura automaticamente */
-    height: 600px; /* Define a altura fixa */
+    height: 300px; /* Define a altura fixa */
     aspect-ratio: 9 / 16; /* Mantém o aspecto 9:16 */
     object-fit: cover; /* Garante que o GIF preencha o espaço sem distorção */
     border-radius: 10px; /* Bordas arredondadas para os GIFs */
