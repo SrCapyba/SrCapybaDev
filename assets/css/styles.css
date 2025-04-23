@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #19171A; /* Cor de fundo */
+    color: #ffffff;
+}
+
+/* Importa a fonte Hussar Bold */
+@font-face {
+    font-family: 'Hussar Bold';
+    src: url('../fonts/Hussar-Bold.ttf') format('truetype'); /* Caminho para o arquivo da fonte */
+    font-weight: bold;
+    font-style: normal;
+}
+
+header {
+    background: #19171A; /* Cor de fundo do cabeçalho */
+    color: #ffffff; /* Cor do Texto */
+    padding: 20px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estiliza a lista de navegação */
+nav ul {
+    display: flex; /* Alinha os itens horizontalmente */
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0;
+    margin: 0;
+}
+
+/* Define o espaçamento entre os botões */
+nav ul li {
+    margin: 0 5px; /* Ajusta o espaçamento para acomodar o aumento de tamanho */
+}
+
+section {
+    padding: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo padrão dos ícones */
+.nav-icon {
+    width: 50px; /* Largura padrão */
+    height: 50px; /* Altura padrão */
+    filter: brightness(0.5);
+    transition: all 0.3s ease; /* Suaviza as transições de tamanho e cor */
+}
+
+/* Quando o mouse passa sobre o ícone */
+.nav-icon:hover {
+    width: 75px; /* Aumenta a largura */
+    height: 75px; /* Aumenta a altura */
+    filter: brightness(1); /* Aumenta o brilho (ou pode ser substituído por outra cor) */
+}
+
+/* Caixa de texto que aparece ao passar o mouse */
+.tooltip {
+    position: absolute; /* Permite posicionar a caixa em relação ao mouse */
+    background-color: #ffffff; /* Cor de fundo da caixa */
+    color: #30A9FF; /* Cor do texto */
+    padding: 5px 10px; /* Espaçamento interno da caixa */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 14px; /* Tamanho do texto */
+    display: none; /* Inicialmente escondida */
+    pointer-events: none; /* Impede que o mouse interaja com a caixa */
+    z-index: 1000; /* Garante que a caixa fique acima de outros elementos */
+}
+
+/* Aplica a fonte ao cabeçalho */
+header h1 {
+    font-family: 'Hussar Bold', Arial, sans-serif; /* Define Hussar Bold como a fonte principal */
+    color: #30A9FF; /* Cor do texto */
+}
+
+/* Estilo para o texto menor no cabeçalho */
+.header-subtitle {
+    font-size: 1.5em; /* Tamanho menor que o título */
+    color: #ffffff; /* Cor cinza clara */
+    margin-top: 5px; /* Espaçamento entre o título e o subtítulo */
+    font-family: 'Hussar Bold'; /* Fonte padrão ou personalizada */
+    text-align: center; /* Centraliza o texto */
+}
