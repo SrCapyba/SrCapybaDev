@@ -20,4 +20,17 @@ document.addEventListener('DOMContentLoaded', () => {
             tooltip.style.display = 'none';
         });
     });
+
+    const gifs = document.querySelectorAll('.gif');
+
+    gifs.forEach(gif => {
+        gif.addEventListener('mouseover', () => {
+            gif.play(); // Inicia o GIF ao passar o mouse
+        });
+
+        gif.addEventListener('mouseout', () => {
+            gif.pause(); // Pausa o GIF ao sair do mouse
+            gif.currentTime = 0; // Reinicia o GIF
+        });
+    });
 });

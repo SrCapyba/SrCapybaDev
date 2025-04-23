@@ -1,17 +1,18 @@
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #19171A; /* Cor de fundo */
-    color: #ffffff;
-}
-
 /* Importa a fonte Hussar Bold */
 @font-face {
     font-family: 'Hussar Bold';
     src: url('../fonts/Hussar-Bold.ttf') format('truetype'); /* Caminho para o arquivo da fonte */
     font-weight: bold;
     font-style: normal;
+}
+
+body {
+    font-family: 'Hussar Bold';
+    margin: 0;
+    padding: 0;
+    background-color: #19171A; /* Cor de fundo */
+    color: #ffffff;
+    text-align: center;
 }
 
 header {
@@ -106,8 +107,61 @@ header h1 {
 /* Estilo para o texto menor no cabeçalho */
 .header-subtitle {
     font-size: 1.5em; /* Tamanho menor que o título */
-    color: #ffffff; /* Cor cinza clara */
+    color: #c3d4da; /* Cor cinza clara */
     margin-top: 5px; /* Espaçamento entre o título e o subtítulo */
     font-family: 'Hussar Bold'; /* Fonte padrão ou personalizada */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para a seção de projetos */
+.projetos-container {
+    display: flex; /* Alinha os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens na página */
+    gap: 15px; /* Espaçamento entre os GIFs */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+    margin-top: 20px;
+}
+
+.projeto {
+    text-align: center; /* Centraliza o texto abaixo do GIF */
+}
+
+.gif {
+    width: auto; /* Ajusta a largura automaticamente */
+    height: 600px; /* Define a altura fixa */
+    aspect-ratio: 9 / 16; /* Mantém o aspecto 9:16 */
+    object-fit: cover; /* Garante que o GIF preencha o espaço sem distorção */
+    border-radius: 10px; /* Bordas arredondadas para os GIFs */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    filter: brightness(0.2) grayscale(0.8); /* Ajusta o brilho do GIF */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Suaviza o efeito de hover */
+}
+
+.gif:hover {
+    transform: scale(1.05); /* Aumenta o tamanho do GIF ao passar o mouse */
+    filter: grayscale(0) brightness(1); /* Remove o filtro de escala de cinza e ajusta o brilho */
+}
+
+.projeto-nome {
+    font-family: 'Hussar Bold'; /* Fonte Hussar Bold */
+    font-size: 1.2em; /* Tamanho do texto */
+    color: #acacac; /* Cor do texto */
+    margin-top: 20px; /* Espaçamento entre o GIF e o texto */
+    transition: color 0.3s ease, font-size 0.3s ease, margin-top 0.3s ease; /* Suaviza as transições */
+}
+
+/* Muda a cor do nome do projeto quando o mouse está sobre o GIF */
+.projeto:hover .projeto-nome {
+    color: #30A9FF; /* Nova cor do texto */
+    font-size: 1.5em; /* Tamanho do texto */
+    margin-top: 35px; /* Espaçamento entre o GIF e o texto */
+}
+
+/* Estilo para os títulos das seções */
+h2 {
+    font-family: 'Hussar Bold'; /* Fonte Hussar Bold */
+    font-size: 2.5em; /* Aumenta o tamanho do texto */
+    color: #30A9FF; /* Cor do texto */
+    margin: 40px 0 40px; /* Espaçamento vertical: 40px acima e 20px abaixo */
     text-align: center; /* Centraliza o texto */
 }
