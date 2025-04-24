@@ -11,15 +11,20 @@ body {
     margin: 0;
     padding: 0;
     background-color: #19171A; /* Cor de fundo */
+    background-image: url('../images/background.png'); /* Caminho para o arquivo PNG */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-size: cover; /* Faz com que a imagem cubra toda a área visível */
+    background-position: center; /* Centraliza a imagem no meio da página */
+    background-attachment: fixed; /* Faz com que a imagem fique fixa ao rolar a página */
     color: #ffffff;
     text-align: center;
 }
 
 header {
-    background: #19171A; /* Cor de fundo do cabeçalho */
     color: #ffffff; /* Cor do Texto */
     padding: 20px 0;
     text-align: center;
+    margin-bottom: 40px; /* Espaçamento abaixo do cabeçalho */
 }
 
 h1 {
@@ -57,6 +62,7 @@ nav ul li {
 }
 
 section {
+    margin-bottom: 80px; /* Espaçamento entre as seções */
     padding: 20px;
 }
 
