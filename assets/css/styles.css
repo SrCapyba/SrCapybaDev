@@ -117,7 +117,7 @@ header h1 {
 .projetos-container {
     display: flex; /* Alinha os itens horizontalmente */
     justify-content: center; /* Centraliza os itens na página */
-    gap: 15px; /* Espaçamento entre os GIFs */
+    gap: 5px; /* Espaçamento entre os GIFs */
     flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
     margin-top: 20px;
 }
@@ -155,6 +155,27 @@ header h1 {
     color: #30A9FF; /* Nova cor do texto */
     font-size: 1.5em; /* Tamanho do texto */
     margin-top: 35px; /* Espaçamento entre o GIF e o texto */
+}
+
+/* Estilo para a descrição do projeto */
+.projeto-descricao {
+    font-family: 'Hussar Bold'; /* Fonte Hussar Bold */
+    font-size: 1em; /* Tamanho do texto */
+    color: #dadada; /* Cor do texto */
+    margin-top: 10px; /* Espaçamento entre o nome e a descrição */
+    opacity: 0; /* Inicialmente invisível */
+    transition: opacity 0.3s ease; /* Suaviza a transição de visibilidade */
+    text-align: center; /* Centraliza o texto */
+    max-width: 325px; /* Define a largura máxima da descrição */
+    line-height: 1.5em; /* Ajusta o espaçamento entre as linhas */
+    word-wrap: break-word; /* Garante que palavras longas sejam quebradas */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+}
+
+/* Exibe a descrição quando o mouse está sobre o vídeo */
+.projeto:hover .projeto-descricao {
+    opacity: 1; /* Torna a descrição visível */
 }
 
 /* Estilo para os títulos das seções */
