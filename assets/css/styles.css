@@ -117,13 +117,14 @@ header h1 {
 .projetos-container {
     display: flex; /* Alinha os itens horizontalmente */
     justify-content: center; /* Centraliza os itens na página */
-    gap: 5px; /* Espaçamento entre os GIFs */
+    gap: 0px; /* Espaçamento entre os GIFs */
     flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
     margin-top: 20px;
 }
 
 .projeto {
-    text-align: center; /* Centraliza o texto abaixo do GIF */
+    position: relative; /* Define o contêiner como referência para posicionamento absoluto */
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
 }
 
 .gif {
@@ -157,25 +158,30 @@ header h1 {
     margin-top: 35px; /* Espaçamento entre o GIF e o texto */
 }
 
-/* Estilo para a descrição do projeto */
 .projeto-descricao {
     font-family: 'Hussar Bold'; /* Fonte Hussar Bold */
     font-size: 1em; /* Tamanho do texto */
     color: #dadada; /* Cor do texto */
-    margin-top: 10px; /* Espaçamento entre o nome e a descrição */
     opacity: 0; /* Inicialmente invisível */
-    transition: opacity 0.3s ease; /* Suaviza a transição de visibilidade */
+    visibility: hidden; /* Garante que a descrição não seja visível */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Sincroniza visibilidade com opacidade */
     text-align: center; /* Centraliza o texto */
     max-width: 325px; /* Define a largura máxima da descrição */
     line-height: 1.5em; /* Ajusta o espaçamento entre as linhas */
     word-wrap: break-word; /* Garante que palavras longas sejam quebradas */
-    margin-left: auto; /* Centraliza horizontalmente */
-    margin-right: auto; /* Centraliza horizontalmente */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    pointer-events: none; /* Impede interação com o mouse */
+    height: 0; /* Remove a altura inicial */
+    overflow: hidden; /* Garante que o conteúdo não visível seja escondido */
 }
 
-/* Exibe a descrição quando o mouse está sobre o vídeo */
+/* Exibe a descrição e ajusta o espaçamento quando o mouse está sobre o projeto */
 .projeto:hover .projeto-descricao {
     opacity: 1; /* Torna a descrição visível */
+    visibility: visible; /* Garante que a descrição só seja visível após o hover */
+    pointer-events: auto; /* Permite interação com o mouse */
+    height: auto; /* Permite que a altura seja ajustada automaticamente */
+    margin-top: 15px; /* Adiciona espaçamento extra quando visível */
 }
 
 /* Estilo para os títulos das seções */
