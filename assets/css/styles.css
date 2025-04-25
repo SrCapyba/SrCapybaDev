@@ -201,10 +201,13 @@ h2 {
 
 /* Estilo para o contêiner da foto */
 .foto-container {
-    position: relative; /* Define o contêiner como referência para posicionamento */
-    text-align: center; /* Centraliza o conteúdo */
-    margin: 20px auto; /* Centraliza o contêiner na página */
-    width: 700px; /* Largura do contêiner */
+    position: relative;
+    text-align: center;
+    margin: 20px auto;
+    width: 100%; /* Ajusta a largura ao tamanho da tela */
+    max-width: 700px; /* Limita a largura máxima a 700px */
+    padding: 0 20px; /* Adiciona um espaçamento interno para evitar que o conteúdo encoste nas bordas */
+    box-sizing: border-box; /* Inclui o padding na largura total */
 }
 
 /* Estilo para a foto */
