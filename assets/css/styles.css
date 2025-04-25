@@ -198,3 +198,106 @@ h2 {
     margin: 40px 0 40px; /* Espaçamento vertical: 40px acima e 20px abaixo */
     text-align: center; /* Centraliza o texto */
 }
+
+/* Estilo para o contêiner da foto */
+.foto-container {
+    position: relative; /* Define o contêiner como referência para posicionamento */
+    text-align: center; /* Centraliza o conteúdo */
+    margin: 20px auto; /* Centraliza o contêiner na página */
+    width: 700px; /* Largura do contêiner */
+}
+
+/* Estilo para a foto */
+.foto-sobre {
+    width: 250px; /* Largura da foto */
+    height: 250px; /* Altura da foto */
+    border-radius: 50%; /* Deixa a foto redonda */
+    object-fit: cover; /* Garante que a foto preencha o espaço sem distorção */
+    transition: transform 0.3s ease; /* Suaviza o efeito ao passar o mouse */
+    filter: brightness(0.2) grayscale(0.8); /* Ajusta o brilho e a escala de cinza */
+}
+
+/* Efeito ao passar o mouse sobre a foto */
+.foto-container:hover .foto-sobre{
+    transform: scale(1.05); /* Aumenta levemente o tamanho da foto */
+    filter: brightness(1) grayscale(0); /* Ajusta o brilho e a escala de cinza */
+}
+
+/* Estilo para o texto da descrição */
+.foto-descricao {
+    font-family: 'Hussar Bold'; /* Fonte Hussar Bold */
+    font-size: 1.3em; /* Tamanho do texto */
+    color: #dadada; /* Cor do texto */
+    text-shadow: #19171A 0px 0px 2px; /* Sombra do texto */
+    opacity: 0; /* Inicialmente invisível */
+    visibility: hidden; /* Garante que o texto não ocupe espaço no layout */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Suaviza a transição de visibilidade */
+    margin-top: 25px; /* Espaçamento entre a foto e o texto */
+    line-height: 1.5em; /* Ajusta o espaçamento entre as linhas */
+    height: 0; /* Remove a altura inicial */
+    overflow: hidden
+}
+
+/* Estilo para o texto da descrição */
+.foto-descricao2 {
+    font-family: 'Hussar Bold'; /* Fonte Hussar Bold */
+    font-size: 1.4em; /* Tamanho do texto */
+    color: #dadada; /* Cor do texto */
+    text-shadow: #19171A 0px 0px 2px; /* Sombra do texto */
+    opacity: 0; /* Inicialmente invisível */
+    visibility: hidden; /* Garante que o texto não ocupe espaço no layout */
+    transition: opacity 0.3s ease, visibility 0s linear 0.3s; /* Suaviza a transição de visibilidade */
+    margin-top: 25px; /* Espaçamento entre a foto e o texto */
+    line-height: 1.5em; /* Ajusta o espaçamento entre as linhas */
+    height: 0; /* Remove a altura inicial */
+    overflow: hidden
+}
+
+/* Exibe o texto quando o mouse está sobre a foto */
+.foto-container:hover .foto-descricao {
+    opacity: 1; /* Torna o texto visível */
+    visibility: visible; /* Faz o texto ocupar espaço no layout */
+    text-shadow: #19171A 0px 0px 20px; /* Sombra do texto */
+    height: auto; /* Remove a altura inicial */
+    transition: opacity 0.3s ease, visibility 0s linear 0s; /* Sincroniza visibilidade com opacidade */
+}
+
+/* Exibe o texto quando o mouse está sobre a foto */
+.foto-container:hover .foto-descricao2 {
+    opacity: 1; /* Torna o texto visível */
+    visibility: visible; /* Faz o texto ocupar espaço no layout */
+    text-shadow: #19171A 0px 0px 20px; /* Sombra do texto */
+    height: auto; /* Remove a altura inicial */
+    transition: opacity 0.3s ease, visibility 0s linear 0s; /* Sincroniza visibilidade com opacidade */
+}
+
+/* Estilo para os rótulos (Nome, Raça, etc.) */
+.foto-descricao .label {
+    color: #30A9FF; /* Cor diferente para os rótulos */
+    font-weight: bold; /* Deixa os rótulos em negrito */
+}
+
+/* Estilo para o separador */
+.foto-descricao .separator {
+    margin: 0 10px; /* Adiciona espaçamento ao redor do separador */
+    color: #ffffff; /* Cor do separador */
+}
+
+/* Estilo para o vídeo de fundo */
+.background-video {
+    position: fixed; /* Faz o vídeo cobrir toda a página */
+    top: 0;
+    left: 0;
+    width: 100%; /* Faz o vídeo cobrir toda a largura da página */
+    height: 100%; /* Faz o vídeo cobrir toda a altura da página */
+    object-fit: cover; /* Garante que o vídeo preencha o espaço sem distorção */
+    opacity: 0; /* Inicialmente invisível */
+    pointer-events: none; /* Impede interação com o mouse */
+    transition: opacity 0.5s ease; /* Suaviza a transição de opacidade */
+    z-index: -1; /* Coloca o vídeo atrás de todos os elementos */
+}
+
+/* Exibe o vídeo quando o mouse está sobre a foto */
+.foto-container:hover ~ .background-video {
+    opacity: 1; /* Torna o vídeo visível */
+}

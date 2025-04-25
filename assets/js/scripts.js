@@ -33,4 +33,23 @@ document.addEventListener('DOMContentLoaded', () => {
             gif.currentTime = 0; // Reinicia o GIF
         });
     });
+
+    // Seleciona a foto e o vídeo
+    const fotoContainer = document.querySelector('.foto-container');
+    const backgroundVideo = document.querySelector('.background-video');
+    const backgroundAudio = document.querySelector('.background-audio');
+
+    // Adiciona o evento de mouseover para reproduzir o vídeo
+    fotoContainer.addEventListener('mouseover', () => {
+        backgroundVideo.play(); // Reproduz o vídeo
+        backgroundAudio.play(); // Reproduz o áudio
+    });
+
+    // Adiciona o evento de mouseout para pausar o vídeo
+    fotoContainer.addEventListener('mouseout', () => {
+        backgroundVideo.pause(); // Pausa o vídeo
+        backgroundVideo.currentTime = 0; // Reinicia o vídeo
+        backgroundAudio.pause(); // Reproduz o áudio
+        backgroundAudio.currentTime = 0; // Reinicia o áudio
+    });
 });
