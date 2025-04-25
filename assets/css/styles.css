@@ -125,6 +125,7 @@ header h1 {
     justify-content: center; /* Centraliza os itens na página */
     gap: 0px; /* Espaçamento entre os GIFs */
     flex-wrap: wrap; /* Permite que os itens quebrem linha se necessário */
+    row-gap: 60px; /* Adiciona um espaçamento vertical entre os GIFs */
     margin-top: 20px;
 }
 
@@ -304,3 +305,61 @@ h2 {
 .foto-container:hover ~ .background-video {
     opacity: 1; /* Torna o vídeo visível */
 }
+
+/* Contêiner das listas de skills */
+.skills-container {
+    display: flex; /* Alinha as listas horizontalmente */
+    justify-content: center; /* Centraliza as listas na página */
+    gap: 60px; /* Espaçamento entre as listas */
+    margin-top: 20px; /* Espaçamento acima das listas */
+}
+
+/* Estilo para cada lista */
+.skill-list {
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo para os títulos das listas */
+.skill-list h3 {
+    font-size: 1.5em; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento entre o título e os itens */
+    color: #30A9FF; /* Cor do título */
+}
+
+/* Estilo para os itens das listas */
+.skill-list ul {
+    list-style: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    margin: 0; /* Remove a margem padrão */
+}
+
+.skill-list li {
+    font-size: 1.2em; /* Tamanho do texto */
+    color: #dadada; /* Cor do texto */
+    margin-bottom: 5px; /* Espaçamento entre os itens */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* Estilo para o botão de voltar ao topo */
+.scroll-to-top {
+    position: fixed; /* Fixa o botão na tela */
+    top: 20px; /* Posição superior */
+    right: 20px; /* Posição à direita */
+    display: none; /* Inicialmente invisível */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    cursor: pointer; /* Mostra o cursor de clique */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+/* Estilo para o GIF */
+.scroll-icon {
+    width: 120px; /* Largura do GIF */
+    height: 100px; /* Altura do GIF */
+    transition: transform 0.3s ease; /* Suaviza o efeito ao passar o mouse */
+}
+
+/* Efeito ao passar o mouse sobre o botão */
+.scroll-to-top:hover .scroll-icon {
+    transform: scale(1.1); /* Aumenta levemente o tamanho do GIF */
+}
+

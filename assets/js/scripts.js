@@ -52,4 +52,26 @@ document.addEventListener('DOMContentLoaded', () => {
         backgroundAudio.pause(); // Reproduz o áudio
         backgroundAudio.currentTime = 0; // Reinicia o áudio
     });
+
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+
+    // Mostra ou esconde o botão com base na rolagem
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+        const viewportHeight = document.documentElement.clientHeight;
+
+        if (scrollPosition > viewportHeight * 0.2) { // 20% da altura da página
+            scrollToTopButton.style.display = 'flex'; // Mostra o botão
+        } else {
+            scrollToTopButton.style.display = 'none'; // Esconde o botão
+        }
+    });
+
+    // Rola para o topo ao clicar no botão
+    scrollToTopButton.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Rola suavemente
+        });
+    });
 });
