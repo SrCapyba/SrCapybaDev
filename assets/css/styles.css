@@ -368,12 +368,16 @@ h2 {
     .skills-container {
         flex-direction: column; /* Alinha as listas verticalmente */
         gap: 20px; /* Reduz o espaçamento entre as listas */
-        align-items: center; /* Centraliza as listas na tela */
+        align-items: flex-start; /* Alinha as listas à esquerda */
+        padding-left: 20px; /* Adiciona um espaçamento à esquerda */
+        width: 100%; /* Garante que o contêiner ocupe toda a largura */
+        box-sizing: border-box; /* Inclui o padding na largura total */
     }
 
     /* Ajusta o alinhamento dos títulos e itens no mobile */
     .skill-list {
-        text-align: center; /* Centraliza o texto no mobile */
+        text-align: left; /* Alinha o texto à esquerda */
+        width: 100%; /* Garante que cada lista ocupe toda a largura disponível */
     }
 
     .skill-list ul {
