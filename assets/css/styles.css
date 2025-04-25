@@ -363,3 +363,21 @@ h2 {
     transform: scale(1.1); /* Aumenta levemente o tamanho do GIF */
 }
 
+@media (max-width: 768px) {
+    /* Ajusta o contêiner das listas de skills no mobile */
+    .skills-container {
+        flex-direction: column; /* Alinha as listas verticalmente */
+        gap: 20px; /* Reduz o espaçamento entre as listas */
+        align-items: center; /* Centraliza as listas na tela */
+    }
+
+    /* Ajusta o alinhamento dos títulos e itens no mobile */
+    .skill-list {
+        text-align: center; /* Centraliza o texto no mobile */
+    }
+
+    .skill-list ul {
+        text-align: left; /* Mantém os itens alinhados à esquerda */
+    }
+}
+
