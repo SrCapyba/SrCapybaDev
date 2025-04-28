@@ -385,3 +385,33 @@ h2 {
     }
 }
 
+/* Contêiner da seção de contato */
+.contato-container {
+    display: flex; /* Alinha os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens na página */
+    gap: 40px; /* Espaçamento entre os itens */
+    margin-top: 20px; /* Espaçamento acima dos itens */
+}
+
+/* Estilo para cada item de contato */
+.contato-item {
+    display: flex;
+    flex-direction: column; /* Organiza a imagem e o texto verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo para os ícones de contato */
+.contato-icon {
+    width: 100px; /* Largura das imagens */
+    height: 100px; /* Altura das imagens */
+    margin-bottom: 10px; /* Espaçamento entre a imagem e o texto */
+    transition: transform 0.3s ease; /* Suaviza o efeito ao passar o mouse */
+}
+
+/* Estilo para o texto de contato */
+.contato-text {
+    font-size: 1em; /* Tamanho do texto */
+    color: #dadada; /* Cor do texto */
+}
+
